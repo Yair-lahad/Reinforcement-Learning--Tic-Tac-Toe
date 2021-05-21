@@ -1,0 +1,36 @@
+This system learns to play tic-tac-toe using TD(lambda) algorithm with a neural network implementation. 
+Files marked with (-) are not fully implemented. 
+Files marked with (*) should be modified. 
+Please try not to modify files marked with (#) (though you can change them if necessary). 
+
+RunTraining(*):                         Creates a new network and run a full TD training process by playing vs. a semi-random opponent. 
+Train:                                  Train the TD network by gaming using given players. 
+PlotTrainingRes:                        Plot the test results through the training process. 
+Test(#):                                Test the current network's performancs vs. a semi-random opponent. 
+
+TicTacToe:                              The tic-tac-toe game's implementation. 
+TicTacToe\checkboard(#):                Check if the given position is a winning position for one of the players. 
+TicTacToe\RandomChooseSquare(#):        The semi-random player. 
+TicTacToe\TDChooseSquare:               The TD player. The action is chosen according to the current policy. 
+TicTacToe\Game(#):                      Simulate a game between two artificial players. 
+TicTacToe\tictactoe(#):                 A GUI for playing vs. the TD player. 
+
+TicTacToe\Policies:                     Various actor's policies. 
+TicTacToe\Policies\Greedy(#):           The greedy policy. 
+TicTacToe\Policies\EpsGreedy(*):        The epsilon-greedy policy. 
+TicTacToe\Policies\Softmax(-):          The softmax policy. 
+TicTacToe\GetSetPolicy(#):              Get\Set the current policy of the TD player. The default policy is the greedy policy. 
+
+TDNet:                                  The neural network based TD implementation. 
+TDNet\InitializeNet(*):                 Initialize the neural network's structure, activation functions and weights. 
+DDNet\NetFileName:                      Default file name for the network's data. 
+TDNet\SaveNet(#):                       Save the current neural network. 
+TDNet\LoadNet(#):                       If there is no current network, load the last saved neural network. 
+TDNet\TDEvaluate(#):                    Evaluate the neural network's output for a given input. If requested, also evaluate the output's gradient w.r.t. the network's weights. 
+TDNet\TDTrain(-):                       Train the TD system over a given trial's history of states and rewards. 
+
+TDNet\ActivationFunctions:              Various activation functions for the neurons. 
+TDNet\ActivationFunctions\Linear(#):	Linear activation function. 
+TDNet\ActivationFunctions\ReLU(#):      Semi-linear activation function. 
+TDNet\ActivationFunctions\Tanh(#):      Hyperbolic tangent activation function. 
+TDNet\ActivationFunctions\Sigmoid(#):	Sigmoidal activation function. 
